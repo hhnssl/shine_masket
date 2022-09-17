@@ -1,6 +1,6 @@
 # 샤인마스켓
 
-### 🔗 배포 URL : https://shine-masket.herokuapp.com<br><br>
+### 🔗 배포 URL : https://shinemasket.herokuapp.com/<br><br>
 
 ## 1. 개요
 
@@ -79,7 +79,7 @@ export default persistReducer(persistConfig, rootReducer);
 
 ### 3.2 배포 URL
 
-🔗 배포 URL : https://shine-masket.herokuapp.com
+🔗 배포 URL : https://shinemasket.herokuapp.com/
 <br><br>
 
 ## 4. 프로젝트 구조
