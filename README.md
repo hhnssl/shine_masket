@@ -172,7 +172,7 @@ export default persistReducer(persistConfig, rootReducer);
 
 ### 👧 오한솔
 
-- 사용자 프로필 페이지, 팔로워, 팔로잉 목록, 상품 등록
+- <a href="https://github.com/hhnssl/shine_masket/wiki/%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%94%84%EB%A1%9C%ED%95%84-%ED%8E%98%EC%9D%B4%EC%A7%80">사용자 프로필 페이지</a>, <a href="https://github.com/hhnssl/shine_masket/wiki/%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%ED%8C%94%EB%A1%9C%EC%9B%8C-%EB%B0%8F-%ED%8C%94%EB%A1%9C%EC%9E%89-%EB%AA%A9%EB%A1%9D">팔로워 및 팔로잉 목록</a><a href="https://github.com/hhnssl/shine_masket/wiki/%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EC%83%81%ED%92%88-%EB%93%B1%EB%A1%9D">상품 등록</a>
 
 ### 👧 장소연
 
@@ -207,7 +207,7 @@ export default persistReducer(persistConfig, rootReducer);
 
 ## 8. 기능
 
-- ### <a href="https://github.com/YOOJS1205/shine_masket/wiki/%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85">페이지 기능 설명</a>
+- ### <a href="https://github.com/hhnssl/shine_masket/wiki/%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B8%B0%EB%8A%A5-%EC%84%A4%EB%AA%85#%EC%82%AC%EC%9A%A9%EC%9E%90-%ED%94%84%EB%A1%9C%ED%95%84-%ED%8E%98%EC%9D%B4%EC%A7%80">페이지 기능 설명</a>
 
 |                                                                    로그인                                                                    |                                                                            회원가입                                                                            |                                                                 프로필 설정                                                                  |
 | :------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -225,7 +225,7 @@ export default persistReducer(persistConfig, rootReducer);
 
 ### 9.1 트러블 슈팅
 
-### 🔗 https://github.com/YOOJS1205/shine_masket/wiki/%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85-(Trouble-Shooting)
+### 🔗 https://github.com/hhnssl/shine_masket/wiki/%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85-(Trouble-Shooting)
 
 ### 9.2 아쉬운점, 앞으로의 방향성
 
