@@ -1,6 +1,6 @@
 # 샤인마스켓
 
-### 🔗 배포 URL : https://shinemasket.herokuapp.com/<br><br>
+### 🔗 배포 URL : https://shinemasket-41903.web.app//<br><br>
 
 ## 1. 개요
 
