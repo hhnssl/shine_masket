@@ -1,6 +1,9 @@
 # 샤인마스켓
 
 ### 🔗 배포 URL : https://shinemasket-41903.web.app<br><br>
+- 테스트 계정
+  - ID: shine_masket@shine.com
+  - PW: 111111
 
 ## 1. 개요
 
