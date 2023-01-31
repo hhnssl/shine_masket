@@ -79,7 +79,7 @@ export default persistReducer(persistConfig, rootReducer);
 
 ### 3.2 배포 URL
 
-🔗 배포 URL : https://shinemasket.herokuapp.com/
+🔗 배포 URL : https://shinemasket-41903.web.app/
 <br><br>
 
 ## 4. 프로젝트 구조
