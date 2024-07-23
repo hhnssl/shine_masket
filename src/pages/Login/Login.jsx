@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import axios from 'axios';
+import { customAuthAxios } from '../../api/customAuthAxios';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -39,7 +39,7 @@ export default function Login() {
       setIsEmail(false);
     }
     try {
-      const res = await axios.post('https://mandarin.api.weniv.co.kr/user/login/', {
+      const res = await customAuthAxios.post('/login/', {
         user: {
           email: loginId,
           password: loginPassword,
@@ -53,7 +53,7 @@ export default function Login() {
         const UserIntro = res.data.user.intro;
         const UserImage =
           res.data.user.image === 'http://146.56.183.55:5050/Ellipse.png'
-            ? 'https://mandarin.api.weniv.co.kr/Ellipse.png'
+            ? 'https://api.mandarin.weniv.co.kr/Ellipse.png'
             : res.data.user.image;
         const loginToken = res.data.user.token;
         const refreshToken = res.data.user.refreshToken;

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 
-export default function Title({ title }) {
-  return <Subject>{title}</Subject>;
+interface IProps {
+  title: string;
 }
+
+export default memo(function Title({ title }: IProps) {
+  return <Subject>{title}</Subject>;
+});
 
 const Subject = styled.h1`
   font-weight: 600;

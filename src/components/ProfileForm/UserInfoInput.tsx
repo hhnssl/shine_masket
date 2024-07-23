@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 
-export default function UserInfoInput({ placeholder, onChange, isLast, defaultValue }) {
+interface IProps {
+  placeholder: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isLast: boolean;
+  defaultValue: string;
+}
+
+interface IInput {
+  isLast: boolean;
+}
+
+export default memo(function UserInfoInput({
+  placeholder,
+  onChange,
+  isLast,
+  defaultValue,
+}: IProps) {
   return (
     <Input
       placeholder={placeholder}
@@ -10,9 +26,9 @@ export default function UserInfoInput({ placeholder, onChange, isLast, defaultVa
       defaultValue={defaultValue}
     />
   );
-}
+});
 
-const Input = styled.input`
+const Input = styled.input<IInput>`
   display: block;
   width: calc(100% - 20px);
   margin-bottom: ${(props) => (props.isLast ? '30px' : '14px')};

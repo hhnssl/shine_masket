@@ -1,11 +1,10 @@
 import axios from 'axios';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
-// import ProfilePic from '../../assets/images/basic-profile-img.png';
 import UploadPic from '../../assets/icon/icon-image.png';
 
-export default function ImageButton({ getImageSrc }) {
+export default memo(function ImageButton({ getImageSrc }) {
   const { UserImage } = useSelector((state) => ({
     UserImage: state.UserInfoReducer.UserImage,
   }));
@@ -20,7 +19,7 @@ export default function ImageButton({ getImageSrc }) {
   }, [fileName]);
 
   // 이미지 미리 보기 함수
-  const encodeFileToBase64 = (fileBlob) => {
+  const encodeFileToBase64 = useCallback((fileBlob) => {
     const reader = new FileReader();
     reader.readAsDataURL(fileBlob);
 
@@ -28,35 +27,21 @@ export default function ImageButton({ getImageSrc }) {
       reader.onload = async (e) => {
         let formData = new FormData();
         formData.append('image', fileBlob);
-        const res = await axios.post('https://mandarin.api.weniv.co.kr/image/uploadfile', formData);
+        const res = await axios.post('https://api.mandarin.weniv.co.kr/image/uploadfile', formData);
         console.log(res);
-        setFileName(`https://mandarin.api.weniv.co.kr/${res.data.filename}`);
-        localStorage.setItem('image', `https://mandarin.api.weniv.co.kr/${res.data.filename}`);
+        setFileName(`https://api.mandarin.weniv.co.kr/${res.data.filename}`);
+        localStorage.setItem('image', `https://api.mandarin.weniv.co.kr/${res.data.filename}`);
         setImgSrc(e.target.result);
         resolve();
       };
     });
-  };
-
-  // const onSubmitImage = async (e) => {
-  //   let files = e.target.result;
-
-  //   for (let i = 0; i < files.length; i++) {
-  //     let formData = new FormData();
-  //     formData.append('image', files[i]);
-  //     const res = await axios.post(
-  //       'https://mandarin.api.weniv.co.kr/image/uploadfile',
-  //       formData
-  //     );
-  //     console.log(res);
-  //   }
-  // };
+  }, []);
 
   // 숨겨진 Input과 이미지 버튼 연결
-  const onHandleImageButton = (e) => {
+  const onHandleImageButton = useCallback((e) => {
     e.preventDefault();
     photoInput.current.click();
-  };
+  }, []);
 
   return (
     <ButtonContainer>
@@ -72,14 +57,14 @@ export default function ImageButton({ getImageSrc }) {
         }}
       />
       <ProfileImgContainer>
-        <ProfileImg src={fileName ? fileName : 'https://mandarin.api.weniv.co.kr/Ellipse.png'} />
+        <ProfileImg src={fileName ? fileName : 'https://api.mandarin.weniv.co.kr/Ellipse.png'} />
         <UploadImgButton onClick={onHandleImageButton}>
           <UploadImg src={UploadPic} alt="프로필 사진 업로드 이미지" />
         </UploadImgButton>
       </ProfileImgContainer>
     </ButtonContainer>
   );
-}
+});
 
 const ButtonContainer = styled.section`
   display: block;
@@ -122,5 +107,6 @@ const UploadImgButton = styled.button`
 
 const UploadImg = styled.img`
   width: 28px;
+  height: 28px;
   margin-top: 3px;
 `;
